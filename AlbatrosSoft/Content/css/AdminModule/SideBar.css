@@ -1,0 +1,84 @@
+﻿/*
+// ===================================================================================================
+// Desarrollado Por		    :   Harold Caicedo.
+// Fecha de Creación		:   2014/01/21.
+// Producto o sistema	    :   NAVI10
+// Empresa			        :   Wizenz Technologies
+// Proyecto			        :   NAVI10
+// Cliente			        :   Varios.
+// ===================================================================================================
+// Versión	        Descripción
+// 1.0.0.0	        Hoja de Estilos para el Arbol del sitio WEB.
+// ===================================================================================================
+// HISTORIAL DE CAMBIOS:
+// ===================================================================================================
+// Ver.	 Fecha		    Autor					Descripción
+// ---	 -------------	----------------------	------------------------------------------------------
+// XX	 yyyy/MM/dd	    [Nombre Completo]	    [Razón del cambio realizado] 
+// ===================================================================================================
+*/
+
+/* Html List */
+.MenuNav {
+    font: normal 12pt Arial;
+    padding: 0px;
+    margin: 0px 0px 0px;
+    width: 100%;
+    background: White;
+    color: #133238;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+/* li Group */
+.MenuNavGroup {
+    padding: 1px 1px 1px 1px;
+    background: #366092;
+    color: white;
+    font: bolder 12pt Arial;
+    cursor: default;
+}
+
+.MenuNavElement {
+    color: #133238;
+    padding: 1px 3px 3px 1px;
+    background: White;
+    font: normal 12pt Arial;
+}
+
+    .MenuNavElement :hover {
+        font: normal 12pt Arial;
+        background: Gray;
+        color: white;
+        cursor: pointer;
+    }
+
+.MenuNavElementOver {
+    font: normal 12pt Arial;
+    background: Gray;
+    color: white;
+    cursor: pointer;
+}
+
+.MenuNavElement.normal {
+    background: White;
+    color: #133238;
+}
+
+/* Link Image */
+.MenuNavElement img {
+    width: 16px;
+    padding: 2px 2px 2px 2px;
+    vertical-align: middle;
+}
+
+.MenuNavElement.normal img {
+    width: 16px;
+    padding: 2px 2px 2px 2px;
+}
+
+.MenuNavElement.over img {
+    padding: 0px 0px 0px 0px;
+    width: 20px;
+    height: 20px;
+}

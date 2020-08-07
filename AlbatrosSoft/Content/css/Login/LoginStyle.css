@@ -1,0 +1,161 @@
+﻿.body {
+    background: #F2F2F2;
+    position: relative;
+}
+
+.mainTable {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 50px 0 0 -251px;
+    background: url('/Images/Login/mainTableBackground.png') no-repeat;
+}
+
+.divHeader {
+    background: url('/Images/Login/imgColorHeader.png') no-repeat;
+    height: 50px;
+    width: 503px;
+}
+
+.divHeaderImg {
+    /*background-color: #004B8B;*/
+    background: url('/Images/Login/imgColor.png') no-repeat;
+    height: 100px;
+    width: 503px;
+}
+
+.divCenter {
+    background: url('/Images/Login/imgColor.png') repeat-x;
+    height: 316px;
+    width: 503px;
+}
+
+.divFooter {
+    background: white;
+    height: auto;
+    width: 503px;
+}
+
+.lblUser {
+    font-family: Calibri;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #376092;
+}
+
+.lblMessage {
+    font-family: Calibri;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #C00000;
+}
+
+.lblCopyrightWizenz {
+    font-family: Calibri;
+    font-size: 9pt;
+    font-weight: lighter;
+    color: #376092;
+}
+
+.lblCopyrightAzure {
+    font-family: Calibri;
+    font-style: italic;
+    font-size: 8pt;
+    font-weight: lighter;
+    color: #33474E;
+}
+
+.label {
+    font-family: Calibri;
+    font-size: 12pt;
+    font-weight: lighter;
+    color: #376092;
+}
+
+.textBox {
+    width: 200px;
+    height: 28px;
+    font-family: Calibri;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #376092;
+    border: 1px solid;
+    border-color: #8EB4E3;
+    padding-left: 4.8pt;
+    padding-right: 4.8pt;
+}
+
+.button {
+    background: url('/Images/Login/btnImage.png') repeat-x;
+    font-size: 14pt;
+    font-family: Calibri;
+    font-weight: bold;
+    text-align: center;
+    color: #376092;
+    height: 35px;
+    width: 90px;
+    border: none;
+    cursor:pointer;
+}
+
+    .button.click {
+        background: white;
+        font-size: 14pt;
+        font-family: Calibri;
+        font-weight: bold;
+        text-align: center;
+        color: #376092;
+        height: 35px;
+        width: 90px;
+        border: solid;
+        cursor:pointer;
+    }
+
+a {
+    font-size: 10pt;
+    font-family: Calibri;
+    color: #376092;
+    cursor: pointer;
+}
+
+    a:visited {
+        font-size: 10pt;
+        font-family: Arial;
+        color: #376092;
+        cursor: pointer;
+    }
+
+.linkButoon {
+    font-size: 10pt;
+    font-family: Calibri;
+    color: #376092;
+    cursor: pointer;
+}
+
+    .linkButoon :visited {
+        font-size: 10pt;
+        font-family: Arial;
+        color: #376092;
+        cursor: pointer;
+    }
+
+.linkDialog {
+    font-size: 10pt;
+    font-family: Calibri;
+    color: #376092;
+    cursor: default;
+}
+
+    .linkDialog :visited {
+        font-size: 10pt;
+        font-family: Arial;
+        color: black;
+        cursor: default;
+    }
+
+    .linkDialog :hover {
+        font-size: 10pt;
+        font-family: Arial;
+        color: black;
+        cursor:default;
+    }

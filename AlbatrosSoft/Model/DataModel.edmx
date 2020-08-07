@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ArionBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nchar" MaxLength="10" />
+          <Property Name="Password" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="Telephone1" Type="varchar" MaxLength="50" />
+          <Property Name="Telephone2" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone1" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone2" Type="varchar" MaxLength="50" />
+          <Property Name="Document" Type="int" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="Telephone1" Type="varchar" MaxLength="50" />
+          <Property Name="Telephone2" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone1" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone2" Type="varchar" MaxLength="50" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="Document" Type="int" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ArionBD.dbo.ViewAppUser' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="ViewAppUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nchar" MaxLength="10" />
+          <Property Name="Password" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ArionBD.dbo.ViewCustomer' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="ViewCustomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="Telephone1" Type="varchar" MaxLength="50" />
+          <Property Name="Telephone2" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone1" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone2" Type="varchar" MaxLength="50" />
+          <Property Name="Document" Type="int" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ArionBD.dbo.ViewDepartment' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="ViewDepartment">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ArionBD.dbo.ViewEmployee' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="ViewEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="Telephone1" Type="varchar" MaxLength="50" />
+          <Property Name="Telephone2" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone1" Type="varchar" MaxLength="50" />
+          <Property Name="MobilePhone2" Type="varchar" MaxLength="50" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="Document" Type="int" />
+        </EntityType>
+        <Association Name="FK__Employee__Depart__72C60C4A">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="spGetDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sptDeleteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="document" Type="int" Mode="In" />
+          <Parameter Name="resultMessage" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="sptGetAppUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sptGetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sptGetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sptInsertAppUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserName" Type="varchar" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+          <Parameter Name="resultMessage" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="sptInsertCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="lastname" Type="varchar" Mode="In" />
+          <Parameter Name="address" Type="varchar" Mode="In" />
+          <Parameter Name="telephone1" Type="varchar" Mode="In" />
+          <Parameter Name="telephone2" Type="varchar" Mode="In" />
+          <Parameter Name="mobilePhone1" Type="varchar" Mode="In" />
+          <Parameter Name="mobilePhone2" Type="varchar" Mode="In" />
+          <Parameter Name="document" Type="int" Mode="In" />
+          <Parameter Name="resultMessage" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="sptInsertDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="description" Type="varchar" Mode="In" />
+          <Parameter Name="resultMessage" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="sptInsertEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="lastname" Type="varchar" Mode="In" />
+          <Parameter Name="address" Type="varchar" Mode="In" />
+          <Parameter Name="telephone1" Type="varchar" Mode="In" />
+          <Parameter Name="telephone2" Type="varchar" Mode="In" />
+          <Parameter Name="mobilePhone1" Type="varchar" Mode="In" />
+          <Parameter Name="mobilePhone2" Type="varchar" Mode="In" />
+          <Parameter Name="departmentId" Type="int" Mode="In" />
+          <Parameter Name="document" Type="int" Mode="In" />
+          <Parameter Name="resultMessage" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="sptUpdateCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="lastname" Type="varchar" Mode="In" />
+          <Parameter Name="address" Type="varchar" Mode="In" />
+          <Parameter Name="telephone1" Type="varchar" Mode="In" />
+          <Parameter Name="telephone2" Type="varchar" Mode="In" />
+          <Parameter Name="mobilePhone1" Type="varchar" Mode="In" />
+          <Parameter Name="mobilePhone2" Type="varchar" Mode="In" />
+          <Parameter Name="document" Type="int" Mode="In" />
+          <Parameter Name="resultMessage" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="spUpdateDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="departmentId" Type="int" Mode="In" />
+          <Parameter Name="description" Type="varchar" Mode="In" />
+          <Parameter Name="resultMessage" Type="varchar" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="ArionBDModelStoreContainer">
+          <EntitySet Name="AppUser" EntityType="Self.AppUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ViewAppUser" EntityType="Self.ViewAppUser" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewAppUser].[UserID] AS [UserID], 
+    [ViewAppUser].[UserName] AS [UserName], 
+    [ViewAppUser].[Password] AS [Password]
+    FROM [dbo].[ViewAppUser] AS [ViewAppUser]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewCustomer" EntityType="Self.ViewCustomer" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewCustomer].[CustomerId] AS [CustomerId], 
+    [ViewCustomer].[Name] AS [Name], 
+    [ViewCustomer].[Lastname] AS [Lastname], 
+    [ViewCustomer].[Address] AS [Address], 
+    [ViewCustomer].[Telephone1] AS [Telephone1], 
+    [ViewCustomer].[Telephone2] AS [Telephone2], 
+    [ViewCustomer].[MobilePhone1] AS [MobilePhone1], 
+    [ViewCustomer].[MobilePhone2] AS [MobilePhone2], 
+    [ViewCustomer].[Document] AS [Document]
+    FROM [dbo].[ViewCustomer] AS [ViewCustomer]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewDepartment" EntityType="Self.ViewDepartment" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewDepartment].[DepartmentId] AS [DepartmentId], 
+    [ViewDepartment].[Description] AS [Description]
+    FROM [dbo].[ViewDepartment] AS [ViewDepartment]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewEmployee" EntityType="Self.ViewEmployee" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewEmployee].[EmployeeId] AS [EmployeeId], 
+    [ViewEmployee].[Name] AS [Name], 
+    [ViewEmployee].[Lastname] AS [Lastname], 
+    [ViewEmployee].[Address] AS [Address], 
+    [ViewEmployee].[Telephone1] AS [Telephone1], 
+    [ViewEmployee].[Telephone2] AS [Telephone2], 
+    [ViewEmployee].[MobilePhone1] AS [MobilePhone1], 
+    [ViewEmployee].[MobilePhone2] AS [MobilePhone2], 
+    [ViewEmployee].[DepartmentId] AS [DepartmentId], 
+    [ViewEmployee].[Document] AS [Document]
+    FROM [dbo].[ViewEmployee] AS [ViewEmployee]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Employee__Depart__72C60C4A" Association="Self.FK__Employee__Depart__72C60C4A">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ArionBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Document" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee" Relationship="ArionBDModel.FK__Employee__Depart__72C60C4A" FromRole="Department" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="Document" Type="Int32" />
+          <NavigationProperty Name="Department" Relationship="ArionBDModel.FK__Employee__Depart__72C60C4A" FromRole="Employee" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="ViewDepartment">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ArionBDEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customer" EntityType="Self.Customer" />
+          <EntitySet Name="Department" EntityType="Self.Department" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="ViewDepartment" EntityType="Self.ViewDepartment" />
+          <FunctionImport Name="spGetDepartment" EntitySet="ViewDepartment" ReturnType="Collection(ArionBDModel.ViewDepartment)" />
+          <EntitySet Name="ViewCustomer" EntityType="ArionBDModel.ViewCustomer" />
+          <FunctionImport Name="sptGetCustomer" EntitySet="ViewCustomer" ReturnType="Collection(ArionBDModel.ViewCustomer)" />
+          <FunctionImport Name="sptInsertDepartment">
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="resultMessage" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sptInsertCustomer">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="lastname" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="telephone1" Mode="In" Type="String" />
+            <Parameter Name="telephone2" Mode="In" Type="String" />
+            <Parameter Name="mobilePhone1" Mode="In" Type="String" />
+            <Parameter Name="mobilePhone2" Mode="In" Type="String" />
+            <Parameter Name="document" Mode="In" Type="Int32" />
+            <Parameter Name="resultMessage" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="ViewEmployee" EntityType="ArionBDModel.ViewEmployee" />
+          <FunctionImport Name="sptGetEmployee" EntitySet="ViewEmployee" ReturnType="Collection(ArionBDModel.ViewEmployee)" />
+          <AssociationSet Name="FK__Employee__Depart__72C60C4A" Association="ArionBDModel.FK__Employee__Depart__72C60C4A">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <FunctionImport Name="sptInsertEmployee">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="lastname" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="telephone1" Mode="In" Type="String" />
+            <Parameter Name="telephone2" Mode="In" Type="String" />
+            <Parameter Name="mobilePhone1" Mode="In" Type="String" />
+            <Parameter Name="mobilePhone2" Mode="In" Type="String" />
+            <Parameter Name="departmentId" Mode="In" Type="Int32" />
+            <Parameter Name="document" Mode="In" Type="Int32" />
+            <Parameter Name="resultMessage" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="ViewAppUser" EntityType="ArionBDModel.ViewAppUser" />
+          <FunctionImport Name="sptGetAppUser" EntitySet="ViewAppUser" ReturnType="Collection(ArionBDModel.ViewAppUser)" />
+          <FunctionImport Name="sptInsertAppUser">
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="resultMessage" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sptDeleteCustomer">
+            <Parameter Name="document" Mode="In" Type="Int32" />
+            <Parameter Name="resultMessage" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="AppUser" EntityType="ArionBDModel.AppUser" />
+          <FunctionImport Name="spUpdateDepartment">
+            <Parameter Name="departmentId" Mode="In" Type="Int32" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="resultMessage" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sptUpdateCustomer">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="lastname" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="telephone1" Mode="In" Type="String" />
+            <Parameter Name="telephone2" Mode="In" Type="String" />
+            <Parameter Name="mobilePhone1" Mode="In" Type="String" />
+            <Parameter Name="mobilePhone2" Mode="In" Type="String" />
+            <Parameter Name="document" Mode="In" Type="Int32" />
+            <Parameter Name="resultMessage" Mode="InOut" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="ViewCustomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Document" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ViewEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobilePhone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="Document" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__Employee__Depart__72C60C4A">
+          <End Type="ArionBDModel.Department" Role="Department" Multiplicity="0..1" />
+          <End Type="ArionBDModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ViewAppUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ArionBDModelStoreContainer" CdmEntityContainer="ArionBDEntities1">
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="ArionBDModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="MobilePhone1" ColumnName="MobilePhone1" />
+                <ScalarProperty Name="MobilePhone2" ColumnName="MobilePhone2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Department">
+            <EntityTypeMapping TypeName="ArionBDModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee">
+            <EntityTypeMapping TypeName="ArionBDModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="MobilePhone1" ColumnName="MobilePhone1" />
+                <ScalarProperty Name="MobilePhone2" ColumnName="MobilePhone2" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewDepartment">
+            <EntityTypeMapping TypeName="ArionBDModel.ViewDepartment">
+              <MappingFragment StoreEntitySet="ViewDepartment">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spGetDepartment" FunctionName="ArionBDModel.Store.spGetDepartment">
+          </FunctionImportMapping>
+          <EntitySetMapping Name="ViewCustomer">
+            <EntityTypeMapping TypeName="ArionBDModel.ViewCustomer">
+              <MappingFragment StoreEntitySet="ViewCustomer">
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="MobilePhone2" ColumnName="MobilePhone2" />
+                <ScalarProperty Name="MobilePhone1" ColumnName="MobilePhone1" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sptGetCustomer" FunctionName="ArionBDModel.Store.sptGetCustomer">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sptInsertDepartment" FunctionName="ArionBDModel.Store.sptInsertDepartment" />
+          <FunctionImportMapping FunctionImportName="sptInsertCustomer" FunctionName="ArionBDModel.Store.sptInsertCustomer" />
+          <EntitySetMapping Name="ViewEmployee">
+            <EntityTypeMapping TypeName="ArionBDModel.ViewEmployee">
+              <MappingFragment StoreEntitySet="ViewEmployee">
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="MobilePhone2" ColumnName="MobilePhone2" />
+                <ScalarProperty Name="MobilePhone1" ColumnName="MobilePhone1" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sptGetEmployee" FunctionName="ArionBDModel.Store.sptGetEmployee">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sptInsertEmployee" FunctionName="ArionBDModel.Store.sptInsertEmployee" />
+          <EntitySetMapping Name="ViewAppUser">
+            <EntityTypeMapping TypeName="ArionBDModel.ViewAppUser">
+              <MappingFragment StoreEntitySet="ViewAppUser">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sptGetAppUser" FunctionName="ArionBDModel.Store.sptGetAppUser">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sptInsertAppUser" FunctionName="ArionBDModel.Store.sptInsertAppUser" />
+          <FunctionImportMapping FunctionImportName="sptDeleteCustomer" FunctionName="ArionBDModel.Store.sptDeleteCustomer" />
+          <EntitySetMapping Name="AppUser">
+            <EntityTypeMapping TypeName="ArionBDModel.AppUser">
+              <MappingFragment StoreEntitySet="AppUser">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spUpdateDepartment" FunctionName="ArionBDModel.Store.spUpdateDepartment" />
+          <FunctionImportMapping FunctionImportName="sptUpdateCustomer" FunctionName="ArionBDModel.Store.sptUpdateCustomer" />
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

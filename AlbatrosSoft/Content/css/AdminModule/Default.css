@@ -1,0 +1,805 @@
+﻿/*
+// ===================================================================================================
+// Desarrollado Por		    :   Harold Caicedo.
+// Fecha de Creación		:   2013/04/22.
+// Producto o sistema	    :   NAVI10
+// Empresa			        :   Wizenz Technologies
+// Proyecto			        :   NAVI10
+// Cliente			        :   Varios.
+// ===================================================================================================
+// Versión	        Descripción
+// 1.0.0.0	        Hoja de Estilos para todo el sitio WEB.
+// ===================================================================================================
+// HISTORIAL DE CAMBIOS:
+// ===================================================================================================
+// Ver.	 Fecha		    Autor					Descripción
+// ---	 -------------	----------------------	------------------------------------------------------
+// XX	 yyyy/MM/dd	    [Nombre Completo]	    [Razón del cambio realizado] 
+// ===================================================================================================
+*/
+body {
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+    font-family: Arial;
+    font-size: 8pt;
+    font-weight: normal;
+}
+
+#spinner {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: white url('../../Images/ModAdmin/loader.gif') 50% 50% no-repeat;
+}
+
+em {
+    color: White;
+    vertical-align: middle;
+}
+
+.backgroundColor {
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+}
+
+.Titulo {
+    font-size: 18pt;
+    font-family: Arial;
+    font-weight: bold;
+    color: #41A6D6;
+    border: 0 0 0 0;
+    border-style: none;
+    text-align: justify;
+    padding: 20pt;
+}
+
+.Parrafo {
+    font-size: 10pt;
+    line-height: 150%;
+    font-family: Arial;
+    text-align: justify;
+}
+
+.buttonPop {
+    background-color: #41A6D6;
+    color: White;
+    border-style: solid;
+    font-size: 8pt;
+    width: 15pt;
+    height: 15pt;
+    cursor: pointer;
+}
+
+    .buttonPop:hover {
+        background-color: #87D5EB;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        width: 15pt;
+        height: 15pt;
+    }
+
+    .buttonPop:disabled {
+        background-color: gray;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        width: 15pt;
+        height: 15pt;
+    }
+
+        .buttonPop:disabled:hover {
+            background-color: gray;
+            color: White;
+            border-style: solid;
+            font-size: 8pt;
+            width: 15pt;
+            height: 15pt;
+        }
+
+.buttonAcc {
+    background-color: #41A6D6;
+    color: White;
+    vertical-align: middle;
+    border-style: solid;
+    font-size: 8pt;
+    width: 15pt;
+    height: 15pt;
+    cursor: pointer;
+}
+
+    .buttonAcc:hover {
+        background-color: #87D5EB;
+        color: White;
+        vertical-align: middle;
+        border-style: solid;
+        font-size: 8pt;
+        width: 15pt;
+        height: 15pt;
+    }
+
+    .buttonAcc:disabled {
+        background-color: gray;
+        color: White;
+        vertical-align: middle;
+        border-style: solid;
+        font-size: 8pt;
+        width: 15pt;
+        height: 15pt;
+    }
+
+        .buttonAcc:disabled:hover {
+            background-color: gray;
+            color: White;
+            vertical-align: middle;
+            border-style: solid;
+            font-size: 8pt;
+            width: 15pt;
+            height: 15pt;
+        }
+
+
+
+.buttonPop2 {
+    background-color: #41A6D6;
+    color: White;
+    border-style: solid;
+    font-size: 8pt;
+    width: 10pt;
+    height: 10pt;
+    cursor: pointer;
+}
+
+    .buttonPop2:hover {
+        background-color: #87D5EB;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        width: 10pt;
+        height: 10pt;
+    }
+
+
+.buttonGrid {
+    background-color: red;
+    color: White;
+    border-style: solid;
+    font-size: 8pt;
+    width: 10pt;
+    height: 10pt;
+    cursor: pointer;
+}
+
+    .buttonGrid:hover {
+        background-color: #87D5EB;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        width: 10pt;
+        height: 10pt;
+    }
+
+.buttonImageDel {
+    background-color: red;
+    color: White;
+    border-style: solid;
+    font-size: 8pt;
+    width: 20pt;
+    height: 20pt;
+    cursor: pointer;
+}
+
+    .buttonImageDel:hover {
+        background-color: #87D5EB;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        width: 20pt;
+        height: 20pt;
+    }
+
+
+
+
+.buttonImage {
+    background-color: #41A6D6;
+    color: White;
+    border-style: solid;
+    font-size: 8pt;
+    cursor: pointer;
+    width: 15pt;
+    height: 15pt;
+}
+
+    .buttonImage:hover {
+        background-color: #87D5EB;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        width: 15pt;
+        height: 15pt;
+    }
+
+
+    .buttonImage:disabled {
+        background-color: gray;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        width: 15pt;
+        height: 15pt;
+    }
+
+        .buttonImage:disabled:hover {
+            background-color: gray;
+            color: White;
+            border-style: solid;
+            font-size: 8pt;
+            width: 15pt;
+            height: 15pt;
+        }
+
+.button {
+    background-color: #41A6D6;
+    color: White;
+    border-style: solid;
+    font-size: 8pt;
+    cursor: pointer;
+    height: 20px;
+}
+
+    .button:hover {
+        background-color: #87D5EB;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        height: 20px;
+    }
+
+
+    .button:disabled {
+        background-color: gray;
+        color: White;
+        border-style: solid;
+        font-size: 8pt;
+        height: 20px;
+    }
+
+        .button:disabled:hover {
+            background-color: gray;
+            color: White;
+            border-style: solid;
+            font-size: 8pt;
+            height: 20px;
+        }
+
+h1 {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+h3 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h4 {
+    vertical-align: middle;
+    font-size: 8pt;
+}
+
+input {
+    border: #ddd 1px solid;
+    padding: 0.15em;
+    width: 10em;
+    background: #fafafa;
+    -moz-border-radius: 0.4em;
+    -khtml-border-radius: 0.4em;
+    font-family: arial;
+    font-size: 8pt;
+    font-weight: normal;
+    height: 15px;
+}
+
+    input:hover {
+        border: #c5c5c5 1px solid;
+        padding: 0.15em;
+        background: #3399ff;
+        color: White;
+    }
+
+    input:focus {
+        border: #3399ff 1px solid;
+        padding: 0.15em;
+        background: White;
+        color: #3399ff;
+    }
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+/**
+* Formularios 
+*/
+fieldset {
+    padding: 0.5em 1em 0.5em 1em;
+    margin-top: 1px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px; /*border: 1px solid #586e80;*/ /*background: White;*/
+    text-align: left;
+    -moz-border-radius: 0.4em;
+    -khtml-border-radius: 0.4em;
+}
+
+    fieldset input {
+        width: 15em;
+        text-align: left;
+        margin: 1px;
+        height: 1.2em;
+    }
+
+    fieldset span {
+        text-align: left;
+        margin: 1px;
+        height: 1.2em;
+    }
+
+legend {
+    padding: 0px 1em 0px 1em;
+    margin: 0px 0px 0px 3em;
+    border: 1px solid #586e80;
+    color: #586e80;
+    font-size: 90%;
+}
+
+fieldset label {
+    float: left;
+    width: 50%;
+    text-align: right;
+    border: transparent 1px solid;
+    padding: 1px;
+    margin: 1px;
+    height: 1.2em;
+}
+
+/**
+* La formateada de arriba, daña los checkbox
+*/
+input.checkbox {
+    width: auto;
+    text-align: justify;
+}
+
+.checkbox {
+    width: auto;
+    text-align: justify;
+}
+
+    .checkbox input {
+        width: auto;
+        text-align: justify;
+    }
+
+p {
+    white-space: normal;
+}
+
+/**
+* Formulario de captura de datos
+*/
+.divContents {
+    top: auto;
+    left: auto;
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: 0px auto 0px auto;
+    background: #FFFFFF;
+}
+
+    .divContents h1 {
+        margin: 0px;
+        height: 14px;
+        padding: 4px 0px 4px 0px;
+        text-align: center;
+        background: #366092;
+        color: white;
+    }
+
+    .divContents h2 {
+        margin: 0px;
+        height: 15px;
+        font: bolder 12pt Arial;
+        padding: 4px 4px 4px 4px;
+        text-align: center;
+        background: #366092;
+        color: white;
+    }
+
+    .divContents h3 {
+        margin: 0px;
+        height: 12px;
+        padding: 4px 0px 4px 0px;
+        text-align: center;
+        background: #41A6D6;
+        color: white;
+    }
+
+    .divContents h4 {
+        margin: 0px;
+        height: 11px;
+        padding: 4px 4px 4px 4px;
+        text-align: center;
+        background: #366092;
+        color: white;
+    }
+
+    .divContents table {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+
+        .divContents table tr {
+            border: none 0px;
+        }
+
+            .divContents table tr td {
+                text-align: center;
+                border: none 1px;
+            }
+
+                .divContents table tr td table {
+                    background: White;
+                    text-align: left;
+                    width: auto;
+                    margin: 0px auto 0px auto;
+                }
+
+                    .divContents table tr td table tr {
+                        border: none 1px;
+                        text-align: left;
+                    }
+
+                        .divContents table tr td table tr td {
+                            text-align: left;
+                            border: none 1px;
+                        }
+
+.divContentsPop {
+    top: auto;
+    left: auto;
+    position: absolute;
+    width: auto;
+    height: auto; /*set to a negative number 1/2 of your height*/
+    margin: 0px auto 0px auto; /*set to a negative number 1/2 of your width*/
+    border-bottom: 2px #586E80 solid;
+    background: #FFFFFF;
+    white-space: nowrap;
+    /*overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0px;*/
+}
+
+    .divContentsPop h1 {
+        margin: 0px;
+        height: 14px;
+        padding: 4px 0px 4px 0px;
+        text-align: left;
+        background: #366092;
+        color: white;
+    }
+
+    .divContentsPop h2 {
+        margin: 0px;
+        height: 11px;
+        padding: 4px 0px 4px 0px;
+        text-align: left;
+        font-size: 12pt;
+        background: #366092;
+        color: white;
+    }
+
+    .divContentsPop h3 {
+        margin: 0px;
+        height: 12px;
+        padding: 4px 0px 4px 0px;
+        text-align: left;
+        background: #41A6D6;
+        color: white;
+    }
+
+    .divContentsPop h4 {
+        margin: 0px;
+        height: 11px;
+        padding: 4px 4px 4px 4px;
+        text-align: left;
+        background: #366092;
+        color: white;
+    }
+
+    .divContentsPop table {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        /*border-bottom: 1px #ABADB3 solid;*/
+    }
+
+        .divContentsPop table tr {
+            border: none 0px;
+        }
+
+            .divContentsPop table tr td {
+                text-align: left;
+                border: none 0px;
+            }
+
+                .divContentsPop table tr td table {
+                    background: White;
+                    /*border-bottom: 1px #C1B5A8 solid;*/
+                    width: auto;
+                    margin: 0px auto 0px auto;
+                }
+
+                    .divContentsPop table tr td table tr {
+                        border: none 0px;
+                    }
+
+                        .divContentsPop table tr td table tr td {
+                            text-align: left;
+                            border: none 0px;
+                        }
+
+.linkButoon {
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: Arial;
+    color: blue;
+}
+
+    .linkButoon :visited {
+        font-size: 10pt;
+        font-weight: bold;
+        font-family: Arial;
+        color: blue;
+    }
+
+    .linkButoon :disabled {
+        font-size: 10pt;
+        font-weight: bold;
+        font-family: Arial;
+        color: gray;
+        background-color: blue;
+    }
+
+.borderit {
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    vertical-align: bottom;
+    cursor: pointer;
+    color: Black;
+    border: 0px;
+}
+
+    .borderit:hover {
+        padding: 0px;
+        width: 20px;
+        height: 20px;
+    }
+
+.ddlInput {
+    border: #ddd 1px solid;
+    border-color: #41A6D6;
+    padding: 1px;
+    margin: 1px;
+    width: 10em;
+    background: #fafafa;
+    -moz-border-radius: 0.4em;
+    -khtml-border-radius: 0.4em;
+    font-family: Arial;
+    font-size: x-small;
+    font-weight: normal;
+    cursor: default;
+}
+
+.txtInput {
+    border: #ddd 1px solid;
+    padding: 1px;
+    margin: 1px;
+    width: 10em;
+    background: #fafafa;
+    -moz-border-radius: 0.4em;
+    -khtml-border-radius: 0.4em;
+    font-family: Arial;
+    font-size: x-small;
+    font-weight: normal;
+    cursor: default;
+}
+
+.txtMessage {
+    background: #C1B5A8;
+    color: #367C99;
+    border: 1px #B4A698;
+}
+
+.txtSearch {
+    border-color: #41A6D6;
+    font-family: Arial;
+    text-transform: none;
+    text-anchor: middle;
+    vertical-align: middle;
+    cursor: text;
+}
+
+    .txtSearch:disabled {
+        border-color: #41A6D6;
+        font-family: Arial;
+        text-transform: none;
+        text-anchor: middle;
+        vertical-align: middle;
+        cursor: text;
+    }
+
+.txtList {
+    border-color: #41A6D6;
+    border-width: 1px;
+    font-family: Arial;
+    font-size: 8pt;
+    text-transform: none;
+    text-anchor: middle;
+    cursor: pointer;
+}
+
+    .txtList:disabled {
+        border-color: #41A6D6;
+        font-family: Arial;
+        font-size: 8pt;
+        text-transform: none;
+        text-anchor: middle;
+        cursor: pointer;
+    }
+
+.lblSubTitulo {
+    height: 12px;
+    padding: 5px 0px 0px 0px;
+    background: #C1B5A8 url(../images/sepia2_bg.png) repeat-x;
+    color: #367C99;
+}
+/**
+* Estilos GridView
+*/
+.gridIcon {
+    border-width: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.gridIconShow {
+    border-width: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+    .gridIconShow a {
+        width: 20px;
+        height: 20px;
+        border-width: 0px;
+        text-decoration: none;
+    }
+/**
+* GridView Table 
+*/
+.grid {
+    width: 100%;
+    border-width: 0px;
+    border-spacing: 0px;
+}
+
+    .grid tr th {
+        background-color: #5D7B9D;
+        color: #FFFFFF;
+    }
+
+.HiddenClass {
+    display: none;
+    visibility: hidden;
+}
+
+.visibleClass {
+    display: block;
+    visibility: visible;
+}
+/**
+* Menu Panel 
+*/
+.menuPanel {
+    height: 10px;
+    background-color: Blue;
+    background-image: url(../images/bar.png);
+    color: White;
+}
+
+    .menuPanel img {
+        height: 16px;
+        width: 16px;
+    }
+/**
+* Modal Popup
+*/
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+/**
+* Error Message 
+*/
+.ErrorMessage {
+    height: 14px;
+    font-size: 10pt;
+    background: White;
+    margin: 2px;
+    color: Red;
+}
+/**
+* Succes Message 
+*/
+.SucessMessage {
+    font-size: 10pt;
+    height: 14px;
+    background: white;
+    margin: 2px;
+    color: blue;
+}
+
+
+.accordion {
+    width: 700pt;
+}
+
+.accordionHeader {
+    border: 1px solid #366092;
+    color: white;
+    background-color: #366092;
+    font-family: Arial;
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 4px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.accordionHeaderSelected {
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #5078B3;
+    font-family: Arial;
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 4px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.accordionContent {
+    border: 1px dashed #2F4F4F;
+    border-top: none;
+    padding: 4px;
+    padding-top: 2px;
+}

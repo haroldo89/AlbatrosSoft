@@ -1,0 +1,55 @@
+﻿/*
+// ===================================================================================================
+// Desarrollado Por		    :   Harold Caicedo.
+// Fecha de Creación		:   2013/04/22.
+// Producto o sistema	    :   NAVI10
+// Empresa			        :   Wizenz Technologies
+// Proyecto			        :   NAVI10
+// Cliente			        :   Varios.
+// ===================================================================================================
+// Versión	        Descripción
+// 1.0.0.0	        Hoja de Estilos para todo el encabezado general del sitio WEB.
+// ===================================================================================================
+// HISTORIAL DE CAMBIOS:
+// ===================================================================================================
+// Ver.	 Fecha		    Autor					Descripción
+// ---	 -------------	----------------------	------------------------------------------------------
+// XX	 yyyy/MM/dd	    [Nombre Completo]	    [Razón del cambio realizado] 
+// ===================================================================================================
+*/
+
+.footer {
+    clear: left;
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+    border-top: 1px solid #E5E5E5;
+    color: White;
+}
+
+.footerList {
+    font: normal 10pt Arial;
+    font-family: Arial;
+    padding: 0px 15px 3px 5px;
+    margin: 3px 3px 3px 3px;
+    margin-left: 0;
+    display: inline;
+    border: 2px white;
+    color: white;
+}
+
+    .footerList li {
+        font: normal 10pt Arial;
+        padding: 0px 15px 3px 3px;
+        margin: 0px 5px 3px 5px;
+        list-style: none;
+        display: inline;
+        border: 2px white;
+    }
+
+        .footerList li a, .footerList li a:visited, .footerList li a:hover {
+            font-family: Arial;
+            text-decoration: none;
+            font-weight: bold;
+            color: #98144d;
+        }

@@ -1,0 +1,171 @@
+﻿/*
+// ===================================================================================================
+// Desarrollado Por		    :   Harold Caicedo.
+// Fecha de Creación		:   2013/04/22.
+// Producto o sistema	    :   NAVI10
+// Empresa			        :   Wizenz Technologies
+// Proyecto			        :   NAVI10
+// Cliente			        :   Varios.
+// ===================================================================================================
+// Versión	        Descripción
+// 1.0.0.0	        Hoja de Estilos para los gridView de sitio WEB.
+// ===================================================================================================
+// HISTORIAL DE CAMBIOS:
+// ===================================================================================================
+// Ver.	 Fecha		    Autor					Descripción
+// ---	 -------------	----------------------	------------------------------------------------------
+// XX	 yyyy/MM/dd	    [Nombre Completo]	    [Razón del cambio realizado] 
+// ===================================================================================================     
+*/
+.grid {
+    color: #333333;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0px; /*border: 2px #576f80 solid;*/
+    cursor: default;
+    border: solid 1px;
+    border-color:gray; 
+    /*border: none 0px;*/
+    overflow-y: auto;
+}
+.grid tr {
+    height: 1.5em;
+    text-transform: capitalize;
+    font: 8pt Arial;
+     border: solid 1px;
+     border-color:gray;
+    /*border: none 0px;*/
+}
+.grid tr td {
+    border: solid 1px;
+    border-color:gray;
+    margin-left: 4px;
+    margin-right: 2px;
+    /*padding-left: 4px;
+    padding-right: 2px;*/
+    text-transform: capitalize ;
+}
+.grid tr.xHeader {
+    background : #366092;
+    height: 1.5em;
+    color: White;
+    text-transform: capitalize;
+    font-size : 10pt;
+    font-weight: bold;
+    border: solid 1px;
+    border-color:gray;
+    
+}
+.grid tr.xHeader a {
+    background : #366092;
+    height: 1.5em;
+    color: White;
+    text-transform: capitalize;
+    font-size : 10pt;
+    font-weight: bold;
+}
+
+.grid tr.xHeader a:visited {
+    background : #366092;
+    height: 1.5em;
+    color: White;
+    text-transform: capitalize;
+    font-size : 10pt;
+    font-weight: bold;
+
+}
+
+
+.grid tr.xHeader:hover {
+    background : #366092;
+    height: 1.5em;
+    color: #DFEDFA;
+    text-transform: capitalize;
+    font: 10pt Arial;
+    font-weight: bold;
+    border: none 0px;
+}
+
+.grid tr.xDataRow {
+    background-color: #F7F6F3;
+    color: #222222;
+    text-transform: capitalize;
+    font: 8pt Arial;
+    border: none 0px;
+}
+.grid tr.xDataRow td.xDataCellRight {
+    text-align: right;
+    border: none 0px;
+    text-transform: capitalize;
+}
+
+.grid tr.xDataRow td.xDataCellLeft {
+    text-align: left;
+    border: none 0px;
+    text-transform: capitalize;
+}
+
+.grid tr.xDataRow td.xDataCellCenter {
+    text-align: center;
+    border: none 0px;
+    text-transform: capitalize;
+}
+
+.grid tr.xDataRowAlternative {
+    background-color: #DFEDFA;
+    color: #444444;
+    text-transform: capitalize;
+    font: 8pt Arial;
+    border: none 0px;
+}
+.grid tr.xDataRowAlternative td.xDataCellRight {
+    text-align: right;
+    border: none 0px;
+    text-transform: capitalize;
+}
+
+.grid tr.xDataRowAlternative td.xDataCellLeft {
+    text-align: left;
+    border: none 0px;
+    text-transform: capitalize;
+}
+
+.grid tr.xDataRowAlternative td.xDataCellCenter {
+    text-align: center;
+    border: none 0px;
+    text-transform: capitalize;
+}
+.grid tr.xDataRowSelected {
+    background: White;
+    color: Black;
+    text-transform: capitalize;
+    font: 8pt Arial;
+    border: none 0px;
+}
+.grid tr.xDataRowSelected td.xDataCellRight {
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.grid tr.xDataRowSelected td.xDataCellLeft {
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.grid tr.xDataRowSelected td.xDataCellCenter {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.grid tr td span {
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.grid tr:hover {
+    background: #3399ff;
+    color: White;
+    text-transform: capitalize;
+    font: 8pt Arial;
+    border: none 0px;
+}

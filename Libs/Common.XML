@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="M:Common.CommonUtils.GetAppVersion">
+            <summary>
+            Devuelve la versión del ensamblado principal del sistema que se encuentra en ejecución.
+            </summary>
+            <returns>Version del ensamblado ejecutable del sistema.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetAssemblyVersion(System.Type)">
+            <summary>
+            /// Devuelve la versión del ensamblado en donde se encuentra definido el tipo especificado.
+            </summary>
+            <param name="innerType">Tipo a evaluar.</param>
+            <returns>Version del ensamblado del tipo indicado.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetAssemblyVersion(System.Reflection.Assembly)">
+            <summary>
+            Devuelve la versión de un ensamblado especificado.
+            </summary>
+            <param name="assembly">Instancia del ensamblado a evaluar.</param>
+            <returns>Versión del ensamblado.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetCurrentDate">
+            <summary>
+            Obtiene la fecha actual del sistema local.
+            </summary>
+            <returns>Fecha actual del sistema local.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetLocalDate(System.Double)">
+            <summary>
+            Obtiene la fecha actual del sistema local.
+            </summary>
+            <param name="timeOffset">Cantidad de horas a adicionar o restar a la fecha/hora UTC.</param>
+            <returns>Fecha actual del sistema local.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.TruncDate(System.DateTime)">
+            <summary>
+            Devuelve la fecha especificada sin el componente de hora.
+            </summary>
+            <param name="source">Fecha a truncar</param>
+            <returns>Valor de fecha sin el componente hora.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetErrorDetail(System.Exception)">
+            <summary>
+            Obtiene el detalle de error de una excepcion.
+            </summary>
+            <param name="exc">Instancia de la excepcion.</param>
+            <returns>Detalle de error de la excepcion.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetErrorDetail(System.Exception,System.String)">
+            <summary>
+            Obtiene el detalle de error de una excepcion.
+            </summary>
+            <param name="exc">Instancia de la excepcion.</param>
+            <param name="messagePrefix">Prefijo para el mensaje de error.</param>
+            <returns>Detalle de error de la excepcion.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetErrorDetail(System.Exception,System.Boolean)">
+            <summary>
+             Obtiene el detalle de error de una excepcion.
+            </summary>
+            <param name="exc">Instancia de la excepcion.</param>
+            <param name="includeDetail">Indica si se incluye o no el detalle de la excepcion</param>
+            <returns>Detalle de error de la excepcion.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.GetErrorDetail(System.Exception,System.Boolean,System.String)">
+            <summary>
+             Obtiene el detalle de error de una excepcion.
+            </summary>
+            <param name="exc">Instancia de la excepcion.</param>
+            <param name="includeDetail">Indica si se incluye o no el detalle de la excepcion</param>
+            <param name="errorPrefix">Prefijo para el mensaje de error.</param>
+            <returns>Detalle de error de la excepcion.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.DeserializeXmlString(System.String,System.Type)">
+            <summary>
+            Reconstruye un objeto desde una cadena en formato XML.
+            </summary>
+            <param name="data">Texto en formato xml.</param>
+            <param name="objecType">Tipo del objeto de retorno.</param>
+            <returns>Objeto deserializado.</returns>
+        </member>
+        <member name="M:Common.CommonUtils.SerializeObjectAsXml(System.Object)">
+            <summary>
+            Serializa un objeto determinado en una cadena XML.
+            </summary>
+            <param name="instance">Objeto a serializar.</param>
+            <returns>Cadena XML correspondiente al objeto serializado.</returns>
+        </member>
+        <member name="T:Common.Contracts.ILogger">
+            <summary>
+            Expone la funcionalidad necesaria para realizar instrumentación de eventos y registro
+            de errores de una aplicación.
+            </summary>
+        </member>
+        <member name="M:Common.Contracts.ILogger.WriteLog(System.String,System.String)">
+            <summary>
+            Permite escribir una entrada de registro de evento de aplicación.
+            </summary>
+            <param name="message">Mensaje con el detalle del evento.</param>
+            <param name="category">Categoría del evento.</param>
+        </member>
+        <member name="M:Common.Contracts.ILogger.WriteErrorLog(System.String,System.String,System.Int32)">
+            <summary>
+            Permite escribir una entrada de registro de error de aplicación.
+            </summary>
+            <param name="errorMessage">Mensaje con el detalle del error.</param>
+            <param name="category">Categoría del error.</param>
+            <param name="severiryLevel">Nivel de severidad del error.</param>
+        </member>
+        <member name="M:Common.Contracts.ILogger.WriteErrorLog(System.String,System.String,System.Int32,System.Exception,System.Boolean)">
+            <summary>
+            Permite escribir una entrada de registro de error de aplicación.
+            </summary>
+            <param name="errorMessage">Mensaje con el detalle del error.</param>
+            <param name="category">Categoría del error.</param>
+            <param name="severiryLevel">Nivel de severidad del error.</param>
+            <param name="innerException">Instancia del error interno generado.</param>
+            <param name="includeErrorDetail">Indica si se incluye el detalle de error en el contenido del mensaje de error.</param>
+        </member>
+        <member name="T:Common.Contracts.IRepository`1">
+            <summary>
+            Expone la funcionalidad base de un repositorio de objetos que ofrece servicios básicos de lectura y escritura sobre un medio de persistencia.
+            </summary>
+            <typeparam name="TEntity">Tipo concreto de objetos a manipular.</typeparam>
+        </member>
+        <member name="M:Common.Contracts.IRepository`1.Add(`0)">
+            <summary>
+            Adiciona el objeto especificado al almacén de datos.
+            </summary>
+            <param name="entity">Instancia del objeto a guardar.</param>
+            <returns>Mensaje de resultado de la operación (Vacío = Operación Exitosa).</returns>
+        </member>
+        <member name="M:Common.Contracts.IRepository`1.Update(`0)">
+            <summary>
+            Persiste los cambios realizados al objeto indicado en el almacén de datos.
+            </summary>
+            <param name="entity">Instancia del objeto a guardar.</param>
+            <returns>Mensaje de resultado de la operación (Vacío = Operación Exitosa).</returns>
+        </member>
+        <member name="M:Common.Contracts.IRepository`1.Remove(`0)">
+            <summary>
+            Ejecuta la operación de eliminación del objeto indicado en el almacén de datos.
+            </summary>
+            <param name="entity">Instancia del objeto a eliminar.</param>
+            <returns>Mensaje de resultado de la operación (Vacío = Operación Exitosa).</returns>
+        </member>
+        <member name="T:Common.ErrorSeverity">
+            <summary>
+            Agrupa y establece los niveles de severidad de error de una aplicación.
+            </summary>
+        </member>
+        <member name="F:Common.ErrorSeverity.LOW">
+            <summary>
+            Nivel de gravedad de error menor.
+            </summary>
+        </member>
+        <member name="F:Common.ErrorSeverity.MEDIUM">
+            <summary>
+            Nivel de gravedad de error intermedio.
+            </summary>
+        </member>
+        <member name="F:Common.ErrorSeverity.HIGH">
+            <summary>
+            Nivel de gravedad de error alto.
+            </summary>
+        </member>
+        <member name="F:Common.ErrorSeverity.CRITICAL">
+            <summary>
+            Nivel de gravedad de error mayor.
+            </summary>
+        </member>
+        <member name="T:Common.FilterHelper`1">
+            <summary>
+            Contiene operaciones para trabajar con expresiones de filtrado de datos para colecciones.
+            </summary>
+            <typeparam name="T">Tipo de dato concreto de los elementos de la colección.</typeparam>
+        </member>
+        <member name="M:Common.FilterHelper`1.AddFilterExpression(System.Func{`0,System.Boolean},System.Func{`0,System.Boolean})">
+            <summary>
+            Permite agregar un criterio de búsqueda de datos a una expresion de filtrado existente.
+            </summary>
+            <param name="currentFilterExpression">Expresion lambda que representa una condicion de filtrado.</param>
+            <param name="newFilterExpression">Expresion lambda que representa un criterio de filtrado.</param>
+            <returns>Expresion lambda resultante con los criterios de filtrado.</returns>
+        </member>
+        <member name="T:Common.StringUtils">
+            <summary>
+            Agrupa un conjunto de utilidades comunes para trabajar con cadenas de texto.
+            </summary>
+        </member>
+        <member name="M:Common.StringUtils.InQuotes(System.String)">
+            <summary>
+            Devuelve una cadena de entrada encerrada en comillas dobles.
+            </summary>
+            <param name="input">Cadena de entrada.</param>
+            <returns>Texto encerrado entre comillas dobles.</returns>
+        </member>
+        <member name="M:Common.StringUtils.InSingleQuotes(System.String)">
+            <summary>
+            Devuelve una cadena de entrada encerrada en comillas sencillas.
+            </summary>
+            <param name="input">Cadena de entrada.</param>
+            <returns>Texto encerrado entre comillas sencillas.</returns>
+        </member>
+        <member name="M:Common.StringUtils.ToFormatString(System.String)">
+            <summary>
+            Convierte una cadena de formato a una expresion de formato.
+            </summary>
+            <param name="format">Cadena de entrada con el formato.</param>
+            <returns>Expresión del formato.</returns>
+        </member>
+        <member name="M:Common.StringUtils.GetStringInBetween(System.String,System.String,System.String)">
+            <summary>
+            Extrae el texto localizado en el medio de dos cadenas de texto.
+            </summary>
+            <param name="beginString">Cadena de texto inicial</param>
+            <param name="endString">Cadena de texto final</param>
+            <param name="sourceString">Texto de origen</param>
+            <returns>Texto contenido entre las dos cadenas.</returns>
+        </member>
+        <member name="M:Common.StringUtils.GetStringInBetween(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Extrae el texto localizado en el medio de dos cadenas de texto.
+            </summary>
+            <param name="beginString">Cadena de texto inicial</param>
+            <param name="endString">Cadena de texto final</param>
+            <param name="sourceString">Texto de origen</param>
+            <param name="includeBegin">Valor que indica si se incluye la cadena de inicio</param>
+            <param name="includeEnd">Valor que indica si se incluye la cadena de fin</param>
+            <returns>Texto contenido entre las dos cadenas.</returns>
+        </member>
+        <member name="M:Common.StringUtils.IsValidEmail(System.String)">
+            <summary>
+            Determina si una cadena de texto coresponde a una direccion de correo electrónico válida.
+            </summary>
+            <param name="mail">Cadena de texto a validar.</param>
+            <returns>true, si es una direccion de correo válida, de lo contrario false.</returns>
+        </member>
+        <member name="M:Common.StringUtils.IsNumeric(System.String)">
+            <summary>
+            Determina si una cadena de texto corresponde a un valor numérico.
+            </summary>
+            <param name="inputString">Cadena de texto a validar.</param>
+            <returns>true, si el valor es numérico, de lo contrario false.</returns>
+        </member>
+        <member name="M:Common.StringUtils.IsSafePassword(System.String,System.Int32,System.String@)">
+            <summary>
+            Determina si una cadena de entrada es una clave segura.
+            </summary>
+            <param name="passwordValue">Valor de clave a validar.</param>
+            <param name="passwordMinLength">Longitud de la clave.</param>
+            <param name="errorMessage">Mensaje con el resultado de la validación.</param>
+            <returns>true si la clave es segura, en caso contrario false.</returns>
+        </member>
+        <member name="M:Common.StringUtils.IsSafePassword(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String@)">
+            <summary>
+            Determina si una cadena de entrada es una clave segura.
+            </summary>
+            <param name="passwordValue">Valor de clave a validar.</param>
+            <param name="passwordMinLength">Longitud de la clave.</param>
+            <param name="passwordMinUpper">Numero mínimo de mayúsculas que debe tener la clave.</param>
+            <param name="passwordMinLower">Numero mínimo de minúsculas que debe tener la clave.</param>
+            <param name="passwordMinNumbers">Numero mínimo de dígitos que debe tener la clave.</param>
+            <param name="passwordMinSpecialChars">Numero mínimo de carácters especiales que debe tener la clave.</param>
+            <param name="errorMessage">Mensaje con el resultado de la validación.</param>
+            <returns>true si la clave es segura, en caso contrario false.</returns>
+        </member>
+        <member name="M:Common.StringUtils.GenerateRandomPassword(System.Int32)">
+            <summary>
+            Permite generar un password de manera aleatoria.
+            //TODO: Mejorar el algoritmo de generacion.
+            </summary>
+            <param name="passwordLength">Longitud del Password a generar</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

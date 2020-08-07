@@ -1,0 +1,28 @@
+﻿body {
+    background-image: url('../../Images/WiZENZNavAgua.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: Center;
+}
+
+.Titulo {
+    font-size: 18pt;
+    font-family: Arial;
+    font-weight: bold;
+    color: #41A6D6;
+    border: 0 0 0 0;
+    border-style: none;
+    text-align: justify;
+}
+
+.Parrafo {
+    font-size: 10pt;
+    line-height: 150%;
+    font-family: Arial;
+    text-align: justify;
+}
+
+li {
+    font-size: 10pt;
+    font-family: Arial;
+}

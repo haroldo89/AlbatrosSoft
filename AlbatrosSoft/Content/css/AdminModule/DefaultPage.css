@@ -1,0 +1,92 @@
+﻿/*
+// ===================================================================================================
+// Desarrollado Por		    :   Harold Caicedo.
+// Fecha de Creación		:   2013/04/22.
+// Producto o sistema	    :   NAVI10
+// Empresa			        :   Wizenz Technologies
+// Proyecto			        :   NAVI10
+// Cliente			        :   Varios.
+// ===================================================================================================
+// Versión	        Descripción
+// 1.0.0.0	        Hoja de Estilos para todo el encabezado general del sitio WEB para el modulo de                                  mantenimiento.
+// ===================================================================================================
+// HISTORIAL DE CAMBIOS:
+// ===================================================================================================
+// Ver.	 Fecha		    Autor					Descripción
+// ---	 -------------	----------------------	------------------------------------------------------
+// XX	 yyyy/MM/dd	    [Nombre Completo]	    [Razón del cambio realizado] 
+// ===================================================================================================
+*/
+
+/*
+Estilo que permite que tener la pagina en un 100% de la pantalla la aplicacion    
+*/
+#mainLayout {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+Estilo que da las dimenciones a la parte superior de la pantalla de la aplicacion.
+*/
+#header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 120px;
+    padding: 0 5px 0 0;
+    background-color: #004B8B;
+}
+
+/*
+Estilo que da dimensiones a la caja encargada de cerrar sesion
+*/
+#headerLogin {
+    position: absolute;
+    width: 200px;
+    height: 110px;
+    display: none;
+    background-color: #004B8B;
+}
+
+/*
+Estilo encargado de dar las dimenciones del panel de navegion de la pagina
+*/
+#navigationPage {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    bottom: 0px;
+    width: 220px;
+    background-color: white;
+}
+
+/*
+Estilo encargado de dar la dimensiones del panel de contenido principal de la pagina.
+*/
+#content {
+    position: absolute;
+    top: 120px;
+    left: 220px;
+    right: 0px;
+    bottom: 40px;
+    background: white;
+    overflow: auto;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+/*
+Estilo encargado de dar las dimensiones del panel de pie de la pagina.
+*/
+#footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 40px;
+    background-color: #004B8B;
+}

@@ -1,0 +1,84 @@
+﻿body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #004B8B;
+    font: normal 10pt Arial;
+}
+
+/* Container Div */
+.HeaderMenu
+{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+/* Html List */
+.HeaderMenu ul
+{
+    padding: 0px;
+    margin: 0px 0px 5px;
+    width: 100%;
+    background: White;
+    color: #133238;
+    list-style-type: none;
+    cursor: default;
+}
+
+/* li Group */
+.HeaderMenu ul li.Group
+{
+    padding: 1px 1px 1px 1px;
+    background: #366092;
+    color: white;
+    font: bolder 6pt Arial;
+    cursor: default;
+}
+
+.HeaderMenu ul li
+{
+    color: white;
+    padding: 1px 2px 1px 5px;
+    background-color: #004B8B;
+    font: bolder 10pt Arial;
+}
+
+.HeaderMenu ul li span
+{
+    padding: 0px 0px 0px 5px;
+    font: normal 10pt Arial;
+}
+
+.HeaderMenu ul li.over
+{
+    background: Gray url(../../images/bg_gray.png) repeat-x;
+    color: white;
+    cursor: pointer;
+}
+
+.HeaderMenu ul li.normal
+{
+    background-color: #004B8B;
+    color: white;
+
+}
+
+/* Link Image */
+.HeaderMenu ul li img
+{
+    width: 16px;
+    padding: 2px 2px 2px 2px;
+    vertical-align: middle;
+}
+.HeaderMenu ul li.normal img
+{
+    width: 16px;
+    padding: 2px 2px 2px 2px;
+}
+.HeaderMenu ul li.over img
+{
+    padding: 0px 0px 0px 0px;
+    width: 20px;
+    height: 20px;
+}

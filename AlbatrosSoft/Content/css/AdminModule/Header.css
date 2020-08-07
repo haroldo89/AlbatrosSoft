@@ -1,0 +1,118 @@
+﻿/*
+// ===================================================================================================
+// Desarrollado Por		    :   Harold Caicedo.
+// Fecha de Creación		:   2013/04/22.
+// Producto o sistema	    :   NAVI10
+// Empresa			        :   Wizenz Technologies
+// Proyecto			        :   NAVI10
+// Cliente			        :   Varios.
+// ===================================================================================================
+// Versión	        Descripción
+// 1.0.0.0	        Hoja de Estilos para el encabezado heneral de el sitio WEB.
+// ===================================================================================================
+// HISTORIAL DE CAMBIOS:
+// ===================================================================================================
+// Ver.	 Fecha		    Autor					Descripción
+// ---	 -------------	----------------------	------------------------------------------------------
+// XX	 yyyy/MM/dd	    [Nombre Completo]	    [Razón del cambio realizado] 
+// ===================================================================================================
+*/
+
+.linkLogin {
+    text-decoration: underline;
+    color: white;
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .linkLogin:hover {
+        text-decoration: underline;
+        color: white;
+        font-family: Arial;
+        font-size: 10pt;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .linkLogin:visited {
+        text-decoration: underline;
+        color: white;
+        font-family: Arial;
+        font-size: 10pt;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+.lilog {
+    display: inline;
+    list-style: none;
+    cursor: pointer;
+}
+
+.divContenido1 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 0.5em;
+    font: normal 20pt Arial;
+    color: White;
+}
+
+/* Html List */
+.MenuNavLogin {
+    font: normal 12pt Arial;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    background-color: #004B8B;
+    color: white;
+    cursor: pointer;
+}
+
+/* li Group */
+.MenuNavLoginGroup {
+    padding: 1px 1px 1px 1px;
+    background: #366092;
+    color: white;
+    font: bolder 12pt Arial;
+    cursor: default;
+}
+
+.MenuNavLoginElement {
+    color: white;
+    padding: 0px 0px 0px 0px;
+    background-color: #004B8B;
+    font: bolder 10pt Arial;
+}
+
+
+.MenuNavLoginElementOver {
+    background: Gray;
+    color: white;
+    cursor: pointer;
+}
+
+.MenuNavLoginElement.normal {
+    background: White;
+    color: #133238;
+}
+
+/* Link Image */
+.MenuNavLoginElement img {
+    width: 16px;
+    padding: 2px 2px 2px 2px;
+    vertical-align: middle;
+}
+
+.MenuNavLoginElement.normal img {
+    width: 16px;
+    padding: 2px 2px 2px 2px;
+}
+
+.MenuNavLoginElement.over img {
+    padding: 0px 0px 0px 0px;
+    width: 20px;
+    height: 20px;
+}
